@@ -106,7 +106,7 @@ func TestData(t *testing.T) {
 			diff:        false,
 		},
 		{
-			name:        "malformed golden master data file",
+			name:        "malformed golden data file",
 			toWriteRaw:  `{   `,
 			compareWith: map[string]interface{}{"x": 42},
 			diff:        true,

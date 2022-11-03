@@ -36,14 +36,13 @@ const (
 	jsonDataIndent = "  "
 )
 
-// Verifier describes a type that can verify its contents
-// against a Golden Master data file and also generate
-// the contents of such file
+// Verifier describes a type that can verify its contents against a
+// golden data file and also generate the contents of such file
 type Verifier interface {
-	// Suffix returns the suffix for the file name of the Golden Master
+	// Suffix returns the suffix for the file name of the golden
 	// data file for this value.
 	Suffix() string
-	// Marshal generates the contents of the Golden Master data file.
+	// Marshal generates the contents of the golden data file.
 	Marshal() ([]byte, error)
 	// Verify returns true if the contents can be considered
 	// the same as the value of the Verifier. It should not return
